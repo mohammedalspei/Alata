@@ -1,0 +1,86 @@
+{
+  "entities": {
+    "Project": {
+      "title": "Project",
+      "description": "Custom engineering project card representation",
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "category": {
+          "type": "string"
+        },
+        "categoryLabel": {
+          "type": "string"
+        },
+        "image": {
+          "type": "string"
+        },
+        "images": {
+          "type": "array"
+        },
+        "location": {
+          "type": "string"
+        },
+        "area": {
+          "type": "string"
+        },
+        "status": {
+          "type": "string"
+        },
+        "statusLabel": {
+          "type": "string"
+        },
+        "year": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "title",
+        "category",
+        "categoryLabel",
+        "image",
+        "location",
+        "area",
+        "status",
+        "statusLabel",
+        "year"
+      ]
+    },
+    "CustomImage": {
+      "title": "CustomImage",
+      "description": "Map representation of dynamic base64 images",
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "base64": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "base64"
+      ]
+    }
+  },
+  "firestore": {
+    "/projects/{projectId}": {
+      "schema": "Project",
+      "description": "A collection storing engineering projects and models"
+    },
+    "/custom_images/{imageId}": {
+      "schema": "CustomImage",
+      "description": "A collection storing base64 strings of uploaded PDFs or images of custom experience certificates"
+    }
+  }
+}

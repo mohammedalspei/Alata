@@ -1,0 +1,27 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Default deny catch-all
+    match /{document=**} {
+      allow read, write: if false;
+    }
+
+    // Projects collection configuration
+    match /projects/{projectId} {
+      allow read: if true;
+      allow write: if true;
+    }
+
+    // Custom certificates/minutes images configuration
+    match /custom_images/{imageId} {
+      allow read: if true;
+      allow write: if true;
+    }
+
+    // Large gallery and layout mockup images for projects
+    match /project_large_images/{imageId} {
+      allow read: if true;
+      allow write: if true;
+    }
+  }
+}

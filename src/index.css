@@ -1,0 +1,82 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Tajawal", "Inter", system-ui, sans-serif;
+  --font-tajawal: "Tajawal", sans-serif;
+  
+  --color-navy-royal: #001f3f;
+  --color-navy-light: #003366;
+  --color-navy-dark: #001021;
+  --color-gold-matte: #a07d2a;
+  --color-gold-light: #c29d43;
+  --color-gold-dark: #7a5f1e;
+}
+
+body {
+  font-family: "Tajawal", "Inter", sans-serif;
+  background-color: #f8fafc; /* slate-50 */
+  color: #0f172a; /* slate-900 */
+}
+
+/* Custom CSS Marquee for Ministry & Partner Logos */
+@keyframes scroller {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes scroller-reverse {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.animate-scroll-rtl {
+  display: flex;
+  width: max-content;
+  animation: scroller 35s linear infinite;
+}
+
+.animate-scroll-rtl:hover {
+  animation-play-state: paused;
+}
+
+/* Custom shadows & borders */
+.gold-border-glow {
+  box-shadow: 0 0 10px rgba(160, 125, 42, 0.2);
+  border: 1px solid rgba(160, 125, 42, 0.3);
+}
+
+.gold-glow {
+  box-shadow: 0 4px 20px rgba(160, 125, 42, 0.15);
+}
+
+.navy-gradient {
+  background: linear-gradient(135deg, #001f3f 0%, #001021 100%);
+}
+
+.gold-gradient {
+  background: linear-gradient(135deg, #c29d43 0%, #a07d2a 100%);
+}
+
+/* Base custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+::-webkit-scrollbar-thumb {
+  background: #a07d2a;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #c29d43;
+}
+

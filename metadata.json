@@ -1,0 +1,6 @@
+{
+  "name": "العطا (Engineering Consulting)",
+  "description": "العطا (Engineering Consulting) - الموقع الرسمي للعطا للاستشارات الهندسية - خدمات مساحية وتصاميم هندسية وتراخيص بناء وإشراف تتماشى مع رؤية المملكة 2030",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
